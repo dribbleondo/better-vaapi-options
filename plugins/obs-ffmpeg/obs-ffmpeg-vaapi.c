@@ -38,7 +38,7 @@
 #include "obs-ffmpeg-formats.h"
 
 #define do_log(level, format, ...)                          \
-	blog(level, "[FFMPEG VAAPI encoder: '%s'] " format, \
+	blog(level, "[AMD and Intel VAAPI encoder: '%s'] " format, \
 	     obs_encoder_get_name(enc->encoder), ##__VA_ARGS__)
 
 #define warn(format, ...) do_log(LOG_WARNING, format, ##__VA_ARGS__)
@@ -72,7 +72,7 @@ struct vaapi_encoder {
 static const char *vaapi_getname(void *unused)
 {
 	UNUSED_PARAMETER(unused);
-	return "FFMPEG VAAPI";
+	return "AMD and Intel VAAPI";
 }
 
 static inline bool valid_format(enum video_format format)
