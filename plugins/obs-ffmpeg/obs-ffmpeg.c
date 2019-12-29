@@ -227,7 +227,7 @@ bool obs_module_load(void)
 	}
 #if !defined(_WIN32) && defined(LIBAVUTIL_VAAPI_AVAILABLE)
 	if (vaapi_supported()) {
-		blog(LOG_INFO, "FFMPEG VAAPI supported");
+		blog(LOG_INFO, "AMD and Intel VAAPI Encoding is supported");
 		obs_register_encoder(&vaapi_encoder_info);
 	}
 #endif
